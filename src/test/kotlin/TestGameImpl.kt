@@ -58,23 +58,70 @@ class TestGameImpl : StringSpec() {
                 row(9)  // PieceType.SPY
             )
             forAll(units) { col ->
-                game.moveUnit(Position(9,col), Position(9,col-1)) shouldBe true
+                game.movePiece(Position(9, col), Position(9, col-1)) shouldBe true
             }
         }
         "The flag and bomb cannot move" {
-            game.moveUnit(Position(0,0), Position(1,0)) shouldBe false
-            game.moveUnit(Position(0,1), Position(1,1)) shouldBe false
+            game.movePiece(Position(0, 0), Position(1, 0)) shouldBe false
+            game.movePiece(Position(0, 1), Position(1, 1)) shouldBe false
         }
         "The scout can move multiple squares" {
-            game.moveUnit(Position(9,8), Position(0,8)) shouldBe true
-            game.moveUnit(Position(0,8), Position(8,8)) shouldBe true
+            game.movePiece(Position(9, 8), Position(0, 8)) shouldBe true
+            game.movePiece(Position(0, 8), Position(8, 8)) shouldBe true
         }
         "Non-scout pieces can only move one square" {
-            game.moveUnit(Position(9,7), Position(0,7)) shouldBe false
-            game.moveUnit(Position(9,0), Position(3,0)) shouldBe false
+            game.movePiece(Position(9, 7), Position(0, 7)) shouldBe false
+            game.movePiece(Position(9, 0), Position(3, 0)) shouldBe false
         }
         "Pieces cannot move diagonally" {
-            game.moveUnit(Position(9,9), Position(8,8)) shouldBe false
+            game.movePiece(Position(9, 9), Position(8, 8)) shouldBe false
+        }
+        "When a piece moves onto another piece the lower piece is removed" {
+            game.movePiece(Position(9, 8), Position(0, 8)) shouldBe true
+            game.movePiece(Position(0, 8), Position(0, 2)) shouldBe true
+            game.getPieceAt(Position(0,2))?.type shouldBe PieceType.GENERAL
+        }
+        "A bomb beats all other pieces but the miner" {
+            game.units = mutableMapOf(
+                Pair(Position(8,0), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,1), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,2), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,3), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,4), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,5), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,6), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,7), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,8), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(8,9), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                Pair(Position(9,0), PieceImpl(PieceType.MARSHAL, Player.RED)),
+                Pair(Position(9,1), PieceImpl(PieceType.GENERAL, Player.RED)),
+                Pair(Position(9,2), PieceImpl(PieceType.COLONEL, Player.RED)),
+                Pair(Position(9,3), PieceImpl(PieceType.MAJOR, Player.RED)),
+                Pair(Position(9,4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
+                Pair(Position(9,5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
+                Pair(Position(9,6), PieceImpl(PieceType.SERGEANT, Player.RED)),
+                Pair(Position(9,7), PieceImpl(PieceType.MINER, Player.RED)),
+                Pair(Position(9,8), PieceImpl(PieceType.SCOUT, Player.RED)),
+                Pair(Position(9,9), PieceImpl(PieceType.SPY, Player.RED))
+            )
+            for(col in 0..9) {
+                if (col == 7) {
+                    game.movePiece(Position(9, col), Position(8, col)) shouldBe true
+                    game.getPieceAt(Position(8, col))?.type shouldBe PieceType.MINER
+                } else {
+                    System.out.println(col)
+                    game.movePiece(Position(9, col), Position(8, col)) shouldBe true
+                    game.getPieceAt(Position(8, col))?.type shouldBe PieceType.BOMB
+                }
+            }
+        }
+        "The spy beats the marshal if the spy attacks" {
+            game.units = mutableMapOf(
+                Pair(Position(0,0), PieceImpl(PieceType.MARSHAL, Player.RED)),
+                Pair(Position(0,1), PieceImpl(PieceType.SPY, Player.BLUE))
+            )
+            game.movePiece(Position(0,1), Position(0,0))
+            game.getPieceAt(Position(0,0))?.type shouldBe PieceType.SPY
         }
     }
 }

@@ -16,7 +16,7 @@ interface Game {
 
     fun getTurn(): Int
 
-    fun moveUnit(from: Position, to: Position): Boolean
+    fun movePiece(from: Position, to: Position): Boolean
 
     fun endTurn()
 

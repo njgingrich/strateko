@@ -5,13 +5,14 @@ import kotlin.collections.MutableMap
  * Created on 10/9/16.
  */
 class GameImpl : Game {
-    var units: MutableMap<Position, PieceImpl>
-    var board: Map<Position, TileImpl>
+    var units: MutableMap<Position, Piece>
+    var board: Map<Position, Tile>
 
     init {
         units = mutableMapOf(
             Pair(Position(0, 0), PieceImpl(PieceType.BOMB, Player.BLUE)),
             Pair(Position(0, 1), PieceImpl(PieceType.FLAG, Player.BLUE)),
+            Pair(Position(0, 2), PieceImpl(PieceType.GENERAL, Player.BLUE)),
             Pair(Position(9, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
             Pair(Position(9, 1), PieceImpl(PieceType.GENERAL, Player.RED)),
             Pair(Position(9, 2), PieceImpl(PieceType.COLONEL, Player.RED)),
@@ -55,7 +56,7 @@ class GameImpl : Game {
         return 1
     }
 
-    override fun moveUnit(from: Position, to: Position): Boolean {
+    override fun movePiece(from: Position, to: Position): Boolean {
         val p = getPieceAt(from) ?: return false
         if (isImmobilePiece(p)) return false
 
@@ -66,13 +67,52 @@ class GameImpl : Game {
         if (Math.abs(from.col - to.col) > 0 &&
             Math.abs(from.row - to.row) > 0) return false
 
-        units.get(from)?.let {
-            units.put(to, it)
-            units.remove(from)
-            return true
+        // battle
+        val toPiece = getPieceAt(to)
+        if (toPiece != null) {
+            val winner = battle(p, toPiece)
+            units.get(from)?.let {
+                units.put(to, winner)
+                units.remove(from)
+                return true
+            }
+        } else {
+            units.get(from)?.let {
+                units.put(to, p)
+                units.remove(from)
+                return true
+            }
         }
 
         return false
+    }
+
+    private fun battle(attacker: Piece, defender: Piece): Piece {
+        System.out.println("attacker: " + attacker)
+        System.out.println("defender: " + defender)
+        when (defender.type) {
+            PieceType.BOMB -> {
+                if (attacker.type == PieceType.MINER) {
+                    return attacker
+                } else {
+                    return defender
+                }
+            }
+            PieceType.MARSHAL -> {
+                if (attacker.type == PieceType.SPY) {
+                    return attacker
+                } else {
+                    return defender
+                }
+            }
+            else -> {
+                if (attacker.type < defender.type) {
+                    return attacker
+                } else {
+                    return defender
+                }
+            }
+        }
     }
 
     private fun moveLongerThanOneTile(from: Position, to: Position): Boolean {
