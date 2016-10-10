@@ -60,12 +60,11 @@ class GameImpl : Game {
         if (isImmobilePiece(p)) return false
 
         if (p.type != PieceType.SCOUT) {
-            if (Math.abs(from.col - to.col)  > 1) {
-                return false
-            } else if (Math.abs(from.row - to.row) > 1) {
-                return false
-            }
+            if(moveLongerThanOneTile(from, to)) return false
         }
+
+        if (Math.abs(from.col - to.col) > 0 &&
+            Math.abs(from.row - to.row) > 0) return false
 
         units.get(from)?.let {
             units.put(to, it)
@@ -73,6 +72,15 @@ class GameImpl : Game {
             return true
         }
 
+        return false
+    }
+
+    private fun moveLongerThanOneTile(from: Position, to: Position): Boolean {
+        if (Math.abs(from.col - to.col) > 1) {
+            return true
+        } else if (Math.abs(from.row - to.row) > 1) {
+            return true
+        }
         return false
     }
 

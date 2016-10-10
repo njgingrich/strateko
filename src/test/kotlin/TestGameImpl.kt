@@ -73,5 +73,8 @@ class TestGameImpl : StringSpec() {
             game.moveUnit(Position(9,7), Position(0,7)) shouldBe false
             game.moveUnit(Position(9,0), Position(3,0)) shouldBe false
         }
+        "Pieces cannot move diagonally" {
+            game.moveUnit(Position(9,9), Position(8,8)) shouldBe false
+        }
     }
 }
