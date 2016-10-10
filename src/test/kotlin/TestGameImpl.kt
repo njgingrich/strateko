@@ -61,6 +61,10 @@ class TestGameImpl : StringSpec() {
                 game.moveUnit(Position(9,col), Position(9,col-1)) shouldBe true
             }
         }
+        "The flag and bomb cannot move" {
+            game.moveUnit(Position(0,0), Position(1,0)) shouldBe false
+            game.moveUnit(Position(0,1), Position(1,1)) shouldBe false
+        }
 
     }
 }

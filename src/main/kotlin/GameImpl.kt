@@ -11,6 +11,7 @@ class GameImpl : Game {
     init {
         units = mutableMapOf(
             Pair(Position(0, 0), PieceImpl(PieceType.BOMB, Player.BLUE)),
+            Pair(Position(0, 1), PieceImpl(PieceType.FLAG, Player.BLUE)),
             Pair(Position(9, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
             Pair(Position(9, 1), PieceImpl(PieceType.GENERAL, Player.RED)),
             Pair(Position(9, 2), PieceImpl(PieceType.COLONEL, Player.RED)),
@@ -55,6 +56,13 @@ class GameImpl : Game {
     }
 
     override fun moveUnit(from: Position, to: Position): Boolean {
+        val u = getPieceAt(from)
+        if (u == null ||
+            u.type == PieceType.BOMB ||
+            u.type == PieceType.FLAG) {
+
+            return false
+        }
         units.get(from)?.let {
             units.put(to, it)
             units.remove(from)
