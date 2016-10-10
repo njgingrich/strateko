@@ -56,18 +56,33 @@ class GameImpl : Game {
     }
 
     override fun moveUnit(from: Position, to: Position): Boolean {
-        val u = getPieceAt(from)
-        if (u == null ||
-            u.type == PieceType.BOMB ||
-            u.type == PieceType.FLAG) {
+        val p = getPieceAt(from) ?: return false
+        if (isImmobilePiece(p)) return false
 
-            return false
+        if (p.type != PieceType.SCOUT) {
+            if (Math.abs(from.col - to.col)  > 1) {
+                return false
+            } else if (Math.abs(from.row - to.row) > 1) {
+                return false
+            }
         }
+
         units.get(from)?.let {
             units.put(to, it)
             units.remove(from)
             return true
         }
+
+        return false
+    }
+
+    private fun isImmobilePiece(p: Piece): Boolean {
+        if (p.type == PieceType.BOMB ||
+            p.type == PieceType.FLAG) {
+
+            return true
+        }
+
         return false
     }
 

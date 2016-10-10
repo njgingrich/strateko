@@ -7,7 +7,7 @@ import io.kotlintest.specs.StringSpec
 class TestGameImpl : StringSpec() {
     private var game: GameImpl = GameImpl()
 
-    override fun beforeAll() {
+    override fun beforeEach() {
         game = GameImpl()
     }
 
@@ -65,6 +65,13 @@ class TestGameImpl : StringSpec() {
             game.moveUnit(Position(0,0), Position(1,0)) shouldBe false
             game.moveUnit(Position(0,1), Position(1,1)) shouldBe false
         }
-
+        "The scout can move multiple squares" {
+            game.moveUnit(Position(9,8), Position(0,8)) shouldBe true
+            game.moveUnit(Position(0,8), Position(8,8)) shouldBe true
+        }
+        "Non-scout pieces can only move one square" {
+            game.moveUnit(Position(9,7), Position(0,7)) shouldBe false
+            game.moveUnit(Position(9,0), Position(3,0)) shouldBe false
+        }
     }
 }
