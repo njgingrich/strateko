@@ -6,15 +6,23 @@ import kotlin.collections.MutableMap
  */
 class GameImpl : Game {
     var units: MutableMap<Position, PieceImpl>
+    var board: Map<Position, TileImpl>
 
     init {
         units = mutableMapOf(
-                Pair(Position(0,0), PieceImpl(PieceType.BOMB, Player.RED))
+            Pair(Position(0, 0), PieceImpl(PieceType.BOMB, Player.RED)),
+            Pair(Position(9, 9), PieceImpl(PieceType.SCOUT, Player.RED))
+        )
+        board = mutableMapOf(
+            Pair(Position(4, 2), TileImpl("water")),
+            Pair(Position(4, 3), TileImpl("water")),
+            Pair(Position(5, 2), TileImpl("water")),
+            Pair(Position(5, 3), TileImpl("water"))
         )
     }
 
-    override fun getTileAt(p: Position): Tile {
-        throw UnsupportedOperationException("not implemented")
+    override fun getTileAt(p: Position): Tile? {
+        return board.get(p)
     }
 
     override fun getPieceAt(p: Position): Piece? {

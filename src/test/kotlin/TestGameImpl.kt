@@ -22,7 +22,22 @@ class TestGameImpl : StringSpec() {
             game.getTurn() shouldBe 1
         }
         "There should be a bomb at (0,0)" {
-            game.getPieceAt(Position(0,0))?.type shouldBe PieceType.BOMB
+            game.getPieceAt(Position(0, 0))?.type shouldBe PieceType.BOMB
+        }
+        "There should be a scout at (9,9)" {
+            game.getPieceAt(Position(9, 9))?.type shouldBe PieceType.SCOUT
+        }
+        "There should be water tiles at (4,2)->(5,3)" {
+            val positionTable = table(
+                    headers("x", "y"),
+                    row(4, 2),
+                    row(4, 3),
+                    row(5, 2),
+                    row(5, 3)
+            )
+            forAll(positionTable) { x, y ->
+                game.getTileAt(Position(x, y))?.type shouldBe "water"
+            }
         }
     }
 }
