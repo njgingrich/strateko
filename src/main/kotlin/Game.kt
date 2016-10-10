@@ -3,6 +3,9 @@
  * Created on 10/9/16.
  */
 interface Game {
+    /**
+     *
+     */
     fun getTileAt(p: Position): Tile?
 
     fun getPieceAt(p: Position): Piece?
@@ -13,7 +16,7 @@ interface Game {
 
     fun getTurn(): Int
 
-    fun moveUnit(from: Position, to: Position)
+    fun moveUnit(from: Position, to: Position): Boolean
 
     fun endTurn()
 

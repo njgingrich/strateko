@@ -24,20 +24,43 @@ class TestGameImpl : StringSpec() {
         "There should be a bomb at (0,0)" {
             game.getPieceAt(Position(0, 0))?.type shouldBe PieceType.BOMB
         }
-        "There should be a scout at (9,9)" {
-            game.getPieceAt(Position(9, 9))?.type shouldBe PieceType.SCOUT
+        "There should be a scout at (9,8)" {
+            game.getPieceAt(Position(9, 8))?.type shouldBe PieceType.SCOUT
         }
-        "There should be water tiles at (4,2)->(5,3)" {
+        "There should be water tiles at (4,2)->(5,3) and (4,6)->(5,7)" {
             val positionTable = table(
-                    headers("x", "y"),
-                    row(4, 2),
-                    row(4, 3),
-                    row(5, 2),
-                    row(5, 3)
+                headers("row", "col"),
+                row(4, 2),
+                row(4, 3),
+                row(5, 2),
+                row(5, 3),
+                row(4, 6),
+                row(4, 7),
+                row(5, 6),
+                row(5, 7)
             )
-            forAll(positionTable) { x, y ->
-                game.getTileAt(Position(x, y))?.type shouldBe "water"
+            forAll(positionTable) { row, col ->
+                game.getTileAt(Position(row, col))?.type shouldBe "water"
             }
         }
+        "All normal pieces can move one square at a time" {
+            val units = table(
+                headers("col"),
+                row(0), // PieceType.MARSHAL
+                row(1), // PieceType.GENERAL
+                row(2), // PieceType.COLONEL
+                row(3), // PieceType.MAJOR
+                row(4), // PieceType.CAPTAIN
+                row(5), // PieceType.LIEUTENANT
+                row(6), // PieceType.SERGEANT
+                row(7), // PieceType.MINER
+                row(8), // PieceType.SCOUT
+                row(9)  // PieceType.SPY
+            )
+            forAll(units) { col ->
+                game.moveUnit(Position(9,col), Position(9,col-1)) shouldBe true
+            }
+        }
+
     }
 }
