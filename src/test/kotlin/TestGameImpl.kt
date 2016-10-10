@@ -40,7 +40,7 @@ class TestGameImpl : StringSpec() {
                 row(5, 7)
             )
             forAll(positionTable) { row, col ->
-                game.getTileAt(Position(row, col))?.type shouldBe "water"
+                game.getTileAt(Position(row, col))?.type shouldBe TileType.WATER
             }
         }
         "All normal pieces can move one square at a time" {

@@ -24,14 +24,14 @@ class GameImpl : Game {
             Pair(Position(9, 9), PieceImpl(PieceType.SPY, Player.RED))
         )
         board = mutableMapOf(
-            Pair(Position(4, 2), TileImpl("water")),
-            Pair(Position(4, 3), TileImpl("water")),
-            Pair(Position(5, 2), TileImpl("water")),
-            Pair(Position(5, 3), TileImpl("water")),
-            Pair(Position(4, 6), TileImpl("water")),
-            Pair(Position(4, 7), TileImpl("water")),
-            Pair(Position(5, 6), TileImpl("water")),
-            Pair(Position(5, 7), TileImpl("water"))
+            Pair(Position(4, 2), TileImpl(TileType.WATER)),
+            Pair(Position(4, 3), TileImpl(TileType.WATER)),
+            Pair(Position(5, 2), TileImpl(TileType.WATER)),
+            Pair(Position(5, 3), TileImpl(TileType.WATER)),
+            Pair(Position(4, 6), TileImpl(TileType.WATER)),
+            Pair(Position(4, 7), TileImpl(TileType.WATER)),
+            Pair(Position(5, 6), TileImpl(TileType.WATER)),
+            Pair(Position(5, 7), TileImpl(TileType.WATER))
         )
     }
 
