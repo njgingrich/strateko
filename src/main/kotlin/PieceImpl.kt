@@ -1,3 +1,7 @@
+import framework.Piece
+import framework.PieceType
+import framework.Player
+
 /**
  * @author nathan
  * Created on 10/9/16.

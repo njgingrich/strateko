@@ -1,3 +1,7 @@
+import framework.PieceType
+import framework.Player
+import framework.Position
+import framework.TileType
 import io.kotlintest.specs.StringSpec
 
 /**
@@ -46,16 +50,16 @@ class TestGameImpl : StringSpec() {
         "All normal pieces can move one square at a time" {
             val units = table(
                 headers("col"),
-                row(0), // PieceType.MARSHAL
-                row(1), // PieceType.GENERAL
-                row(2), // PieceType.COLONEL
-                row(3), // PieceType.MAJOR
-                row(4), // PieceType.CAPTAIN
-                row(5), // PieceType.LIEUTENANT
-                row(6), // PieceType.SERGEANT
-                row(7), // PieceType.MINER
-                row(8), // PieceType.SCOUT
-                row(9)  // PieceType.SPY
+                row(0), // framework.PieceType.MARSHAL
+                row(1), // framework.PieceType.GENERAL
+                row(2), // framework.PieceType.COLONEL
+                row(3), // framework.PieceType.MAJOR
+                row(4), // framework.PieceType.CAPTAIN
+                row(5), // framework.PieceType.LIEUTENANT
+                row(6), // framework.PieceType.SERGEANT
+                row(7), // framework.PieceType.MINER
+                row(8), // framework.PieceType.SCOUT
+                row(9)  // framework.PieceType.SPY
             )
             forAll(units) { col ->
                 game.movePiece(Position(9, col), Position(9, col-1)) shouldBe true
@@ -79,30 +83,30 @@ class TestGameImpl : StringSpec() {
         "When a piece moves onto another piece the lower piece is removed" {
             game.movePiece(Position(9, 8), Position(0, 8)) shouldBe true
             game.movePiece(Position(0, 8), Position(0, 2)) shouldBe true
-            game.getPieceAt(Position(0,2))?.type shouldBe PieceType.GENERAL
+            game.getPieceAt(Position(0, 2))?.type shouldBe PieceType.GENERAL
         }
         "A bomb beats all other pieces but the miner" {
             game.units = mutableMapOf(
-                Pair(Position(8,0), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,1), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,2), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,3), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,4), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,5), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,6), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,7), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,8), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(8,9), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                Pair(Position(9,0), PieceImpl(PieceType.MARSHAL, Player.RED)),
-                Pair(Position(9,1), PieceImpl(PieceType.GENERAL, Player.RED)),
-                Pair(Position(9,2), PieceImpl(PieceType.COLONEL, Player.RED)),
-                Pair(Position(9,3), PieceImpl(PieceType.MAJOR, Player.RED)),
-                Pair(Position(9,4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
-                Pair(Position(9,5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
-                Pair(Position(9,6), PieceImpl(PieceType.SERGEANT, Player.RED)),
-                Pair(Position(9,7), PieceImpl(PieceType.MINER, Player.RED)),
-                Pair(Position(9,8), PieceImpl(PieceType.SCOUT, Player.RED)),
-                Pair(Position(9,9), PieceImpl(PieceType.SPY, Player.RED))
+                    Pair(Position(8, 0), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 1), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 2), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 3), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 4), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 5), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 6), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 7), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 8), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(8, 9), PieceImpl(PieceType.BOMB, Player.BLUE)),
+                    Pair(Position(9, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
+                    Pair(Position(9, 1), PieceImpl(PieceType.GENERAL, Player.RED)),
+                    Pair(Position(9, 2), PieceImpl(PieceType.COLONEL, Player.RED)),
+                    Pair(Position(9, 3), PieceImpl(PieceType.MAJOR, Player.RED)),
+                    Pair(Position(9, 4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
+                    Pair(Position(9, 5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
+                    Pair(Position(9, 6), PieceImpl(PieceType.SERGEANT, Player.RED)),
+                    Pair(Position(9, 7), PieceImpl(PieceType.MINER, Player.RED)),
+                    Pair(Position(9, 8), PieceImpl(PieceType.SCOUT, Player.RED)),
+                    Pair(Position(9, 9), PieceImpl(PieceType.SPY, Player.RED))
             )
             for(col in 0..9) {
                 if (col == 7) {
@@ -117,11 +121,11 @@ class TestGameImpl : StringSpec() {
         }
         "The spy beats the marshal if the spy attacks" {
             game.units = mutableMapOf(
-                Pair(Position(0,0), PieceImpl(PieceType.MARSHAL, Player.RED)),
-                Pair(Position(0,1), PieceImpl(PieceType.SPY, Player.BLUE))
+                    Pair(Position(0, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
+                    Pair(Position(0, 1), PieceImpl(PieceType.SPY, Player.BLUE))
             )
-            game.movePiece(Position(0,1), Position(0,0))
-            game.getPieceAt(Position(0,0))?.type shouldBe PieceType.SPY
+            game.movePiece(Position(0, 1), Position(0, 0))
+            game.getPieceAt(Position(0, 0))?.type shouldBe PieceType.SPY
         }
     }
 }
