@@ -48,20 +48,7 @@ class TestGameImpl : StringSpec() {
             }
         }
         "All normal pieces can move one square at a time" {
-            val units = table(
-                headers("col"),
-                row(0), // framework.PieceType.MARSHAL
-                row(1), // framework.PieceType.GENERAL
-                row(2), // framework.PieceType.COLONEL
-                row(3), // framework.PieceType.MAJOR
-                row(4), // framework.PieceType.CAPTAIN
-                row(5), // framework.PieceType.LIEUTENANT
-                row(6), // framework.PieceType.SERGEANT
-                row(7), // framework.PieceType.MINER
-                row(8), // framework.PieceType.SCOUT
-                row(9)  // framework.PieceType.SPY
-            )
-            forAll(units) { col ->
+            for(col in 0..9) {
                 game.movePiece(Position(9, col), Position(9, col-1)) shouldBe true
             }
         }
