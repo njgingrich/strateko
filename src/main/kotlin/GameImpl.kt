@@ -123,7 +123,7 @@ class GameImpl(map: GameMap) : Game {
     }
 
     override fun endPlayerTurn() {
-        var p = getPlayerInTurn()
+        val p = getPlayerInTurn()
         if (getWinner() != null) {
             endGame(p)
 
