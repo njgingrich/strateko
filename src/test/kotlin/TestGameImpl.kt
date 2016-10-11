@@ -9,10 +9,10 @@ import io.kotlintest.specs.StringSpec
  * Created on 10/9/16.
  */
 class TestGameImpl : StringSpec() {
-    private var game: GameImpl = GameImpl()
+    private var game: GameImpl = GameImpl(TestGameMap())
 
     override fun beforeEach() {
-        game = GameImpl()
+        game = GameImpl(TestGameMap())
     }
 
     init {
@@ -86,28 +86,6 @@ class TestGameImpl : StringSpec() {
             game.getPieceAt(Position(0, 2))?.type shouldBe PieceType.GENERAL
         }
         "A bomb beats all other pieces but the miner" {
-            game.units = mutableMapOf(
-                    Pair(Position(8, 0), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 1), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 2), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 3), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 4), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 5), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 6), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 7), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 8), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(8, 9), PieceImpl(PieceType.BOMB, Player.BLUE)),
-                    Pair(Position(9, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
-                    Pair(Position(9, 1), PieceImpl(PieceType.GENERAL, Player.RED)),
-                    Pair(Position(9, 2), PieceImpl(PieceType.COLONEL, Player.RED)),
-                    Pair(Position(9, 3), PieceImpl(PieceType.MAJOR, Player.RED)),
-                    Pair(Position(9, 4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
-                    Pair(Position(9, 5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
-                    Pair(Position(9, 6), PieceImpl(PieceType.SERGEANT, Player.RED)),
-                    Pair(Position(9, 7), PieceImpl(PieceType.MINER, Player.RED)),
-                    Pair(Position(9, 8), PieceImpl(PieceType.SCOUT, Player.RED)),
-                    Pair(Position(9, 9), PieceImpl(PieceType.SPY, Player.RED))
-            )
             for(col in 0..9) {
                 if (col == 7) {
                     game.movePiece(Position(9, col), Position(8, col)) shouldBe true
@@ -120,12 +98,8 @@ class TestGameImpl : StringSpec() {
             }
         }
         "The spy beats the marshal if the spy attacks" {
-            game.units = mutableMapOf(
-                    Pair(Position(0, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
-                    Pair(Position(0, 1), PieceImpl(PieceType.SPY, Player.BLUE))
-            )
-            game.movePiece(Position(0, 1), Position(0, 0))
-            game.getPieceAt(Position(0, 0))?.type shouldBe PieceType.SPY
+            game.movePiece(Position(3, 4), Position(3, 3))
+            game.getPieceAt(Position(3, 3))?.type shouldBe PieceType.SPY
         }
     }
 }
