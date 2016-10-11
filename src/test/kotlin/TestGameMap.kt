@@ -10,6 +10,7 @@ class TestGameMap : GameMap {
         Pair(Position(0, 0), PieceImpl(PieceType.BOMB, Player.BLUE)),
         Pair(Position(0, 1), PieceImpl(PieceType.FLAG, Player.BLUE)),
         Pair(Position(0, 2), PieceImpl(PieceType.GENERAL, Player.BLUE)),
+        Pair(Position(0, 4), PieceImpl(PieceType.FLAG, Player.RED)),
 
         Pair(Position(3, 3), PieceImpl(PieceType.MARSHAL, Player.RED)),
         Pair(Position(3, 4), PieceImpl(PieceType.SPY, Player.BLUE)),

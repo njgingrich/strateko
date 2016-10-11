@@ -100,5 +100,14 @@ class TestGameImpl : StringSpec() {
             game.movePiece(Position(3, 4), Position(3, 3))
             game.getPieceAt(Position(3, 3))?.type shouldBe PieceType.SPY
         }
+        "After red and blue each take their turn three times, the turn should be 4" {
+            game.endPlayerTurn()
+            game.endPlayerTurn()
+            game.endPlayerTurn()
+            game.endPlayerTurn()
+            game.endPlayerTurn()
+            game.endPlayerTurn()
+            game.getTurn() shouldBe 4
+        }
     }
 }

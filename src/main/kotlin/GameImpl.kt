@@ -6,30 +6,41 @@ import strategy.map.GameMap
  * Created on 10/9/16.
  */
 class GameImpl(map: GameMap) : Game {
+    private var turn = 1
+    private var currentPlayer = Player.RED
     val map: GameMap
 
     init {
         this.map = map
     }
 
-    override fun getTileAt(p: Position): Tile? {
-        return map.board[p]
+    override fun getTileAt(p: Position): Tile {
+        return map.board[p] ?: TileImpl(TileType.GRASS)
     }
 
     override fun getPieceAt(p: Position): Piece? {
         return map.pieces[p]
     }
 
-    override fun getWinner(): String? {
+    override fun getWinner(): Player? {
+        if (getPlayerInTurn() == Player.RED) {
+            // if
+            if (map.pieces.filterValues {
+                it.type == PieceType.FLAG && it.owner == Player.RED
+            }.isEmpty()) {
+                return Player.BLUE
+            }
+        }
+
         return null
     }
 
     override fun getPlayerInTurn(): Player {
-        return Player.RED
+        return currentPlayer
     }
 
     override fun getTurn(): Int {
-        return 1
+        return turn
     }
 
     override fun movePiece(from: Position, to: Position): Boolean {
@@ -108,8 +119,13 @@ class GameImpl(map: GameMap) : Game {
         return false
     }
 
-    override fun endTurn() {
-        throw UnsupportedOperationException("not implemented")
+    override fun endPlayerTurn() {
+        if (getPlayerInTurn() == Player.BLUE) {
+            currentPlayer = Player.RED
+            turn += 1
+        } else {
+            currentPlayer = Player.BLUE
+        }
     }
 
 }
