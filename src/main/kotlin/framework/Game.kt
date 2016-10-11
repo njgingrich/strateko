@@ -64,4 +64,11 @@ interface Game {
      */
     fun endPlayerTurn()
 
+    /**
+     * Do anything required to end the game.
+     *
+     * @param p The winning player
+     */
+    fun endGame(p: Player)
+
 }

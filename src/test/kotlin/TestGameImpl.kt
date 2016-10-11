@@ -109,5 +109,16 @@ class TestGameImpl : StringSpec() {
             game.endPlayerTurn()
             game.getTurn() shouldBe 4
         }
+        "After blue captures red's flag, blue wins" {
+            game.movePiece(Position(0,2), Position(0,3))
+            game.movePiece(Position(0,3), Position(0,4))
+            game.getWinner() shouldBe Player.BLUE
+        }
+        "After red captures blue's flag, red wins" {
+            game.movePiece(Position(9,8), Position(1,8))
+            game.movePiece(Position(1,8), Position(1,1))
+            game.movePiece(Position(1,1), Position(0,1))
+            game.getWinner() shouldBe Player.RED
+        }
     }
 }

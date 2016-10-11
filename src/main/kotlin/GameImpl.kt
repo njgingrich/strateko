@@ -8,7 +8,7 @@ import strategy.map.GameMap
 class GameImpl(map: GameMap) : Game {
     private var turn = 1
     private var currentPlayer = Player.RED
-    val map: GameMap
+    private val map: GameMap
 
     init {
         this.map = map
@@ -23,16 +23,19 @@ class GameImpl(map: GameMap) : Game {
     }
 
     override fun getWinner(): Player? {
-        if (getPlayerInTurn() == Player.RED) {
-            // if
-            if (map.pieces.filterValues {
-                it.type == PieceType.FLAG && it.owner == Player.RED
-            }.isEmpty()) {
-                return Player.BLUE
-            }
-        }
+        if (hasNoFlag(Player.RED)) return Player.BLUE
+        else if (hasNoFlag(Player.BLUE)) return Player.RED
+        else return null
+    }
 
-        return null
+    private fun hasNoFlag(p: Player): Boolean {
+        if (map.pieces.filterValues {
+            it.type == PieceType.FLAG && it.owner == p
+            }.isEmpty()) {
+            return true
+        } else {
+            return false
+        }
     }
 
     override fun getPlayerInTurn(): Player {
@@ -120,12 +123,21 @@ class GameImpl(map: GameMap) : Game {
     }
 
     override fun endPlayerTurn() {
-        if (getPlayerInTurn() == Player.BLUE) {
+        var p = getPlayerInTurn()
+        if (getWinner() != null) {
+            endGame(p)
+
+        // Game isn't over
+        } else if (p == Player.BLUE) {
             currentPlayer = Player.RED
             turn += 1
         } else {
             currentPlayer = Player.BLUE
         }
+    }
+
+    override fun endGame(p: Player) {
+        //throw NotImplementedError("Not implemented.")
     }
 
 }
