@@ -50,6 +50,8 @@ class GameImpl(map: GameMap) : Game {
         val p = getPieceAt(from) ?: return false
         if (isImmobilePiece(p)) return false
 
+        if (getPlayerInTurn() != p.owner) return false
+
         if (p.type != PieceType.SCOUT) {
             if(moveLongerThanOneTile(from, to)) return false
         }
@@ -64,12 +66,14 @@ class GameImpl(map: GameMap) : Game {
             map.pieces[from]?.let {
                 map.pieces.put(to, winner)
                 map.pieces.remove(from)
+                endPlayerTurn()
                 return true
             }
         } else {
             map.pieces[from]?.let {
                 map.pieces.put(to, p)
                 map.pieces.remove(from)
+                endPlayerTurn()
                 return true
             }
         }

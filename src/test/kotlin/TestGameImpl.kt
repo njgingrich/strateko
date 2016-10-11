@@ -50,6 +50,7 @@ class TestGameImpl : StringSpec() {
         "All normal pieces can move one square at a time" {
             for(col in 0..9) {
                 game.movePiece(Position(9, col), Position(9, col-1)) shouldBe true
+                game.endPlayerTurn()
             }
         }
         "The flag and bomb cannot move" {
@@ -58,6 +59,7 @@ class TestGameImpl : StringSpec() {
         }
         "The scout can move multiple squares" {
             game.movePiece(Position(9, 8), Position(0, 8)) shouldBe true
+            game.endPlayerTurn()
             game.movePiece(Position(0, 8), Position(8, 8)) shouldBe true
         }
         "Non-scout pieces can only move one square" {
@@ -69,6 +71,7 @@ class TestGameImpl : StringSpec() {
         }
         "When a piece moves onto another piece the lower piece is removed" {
             game.movePiece(Position(9, 8), Position(0, 8)) shouldBe true
+            game.endPlayerTurn()
             game.movePiece(Position(0, 8), Position(0, 2)) shouldBe true
             game.getPieceAt(Position(0, 2))?.type shouldBe PieceType.GENERAL
         }
@@ -77,13 +80,16 @@ class TestGameImpl : StringSpec() {
                 if (col == 7) {
                     game.movePiece(Position(9, col), Position(8, col)) shouldBe true
                     game.getPieceAt(Position(8, col))?.type shouldBe PieceType.MINER
+                    game.endPlayerTurn()
                 } else {
                     game.movePiece(Position(9, col), Position(8, col)) shouldBe true
                     game.getPieceAt(Position(8, col))?.type shouldBe PieceType.BOMB
+                    game.endPlayerTurn()
                 }
             }
         }
         "The spy beats the marshal if the spy attacks" {
+            game.endPlayerTurn()
             game.movePiece(Position(3, 4), Position(3, 3))
             game.getPieceAt(Position(3, 3))?.type shouldBe PieceType.SPY
         }
@@ -97,15 +103,24 @@ class TestGameImpl : StringSpec() {
             game.getTurn() shouldBe 4
         }
         "After blue captures red's flag, blue wins" {
+            game.endPlayerTurn()
             game.movePiece(Position(0,2), Position(0,3))
+            game.endPlayerTurn()
             game.movePiece(Position(0,3), Position(0,4))
             game.getWinner() shouldBe Player.BLUE
         }
         "After red captures blue's flag, red wins" {
             game.movePiece(Position(9,8), Position(1,8))
+            game.endPlayerTurn()
             game.movePiece(Position(1,8), Position(1,1))
+            game.endPlayerTurn()
             game.movePiece(Position(1,1), Position(0,1))
             game.getWinner() shouldBe Player.RED
+        }
+
+        "Red cannot move blue's pieces and vice versa" {
+            game.movePiece(Position(0,2), Position(1,2)) shouldBe false
+            game.movePiece(Position(9,0), Position(8,1)) shouldBe false
         }
     }
 }
