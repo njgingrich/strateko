@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9602e5fb-a1b0-4a12-8f5e-2b1059e4710e" name="Default" comment="Refactored board into own strategy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/strategy/map/GameMap.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
+    <list default="true" id="9602e5fb-a1b0-4a12-8f5e-2b1059e4710e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
     </list>
     <ignored path="strateko.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,23 +50,23 @@
     <splitter split-orientation="horizontal" split-proportion="0.48833594">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GameImpl.kt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="GameImpl.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+                <state relative-caret-position="340">
+                  <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
                   <folding>
-                    <element signature="e#0#83#0" expanded="true" />
+                    <element signature="e#0#46#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TestGameMap.kt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="TestGameMap.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+                <state relative-caret-position="354">
+                  <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#46#0" expanded="true" />
                   </folding>
@@ -82,8 +81,8 @@
           <file leaf-file-name="TestGameImpl.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+                <state relative-caret-position="340">
+                  <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#140#0" expanded="true" />
                   </folding>
@@ -441,6 +440,7 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/strategy/creation/CreationStrategy.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestCreationStrategy.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/strategy/creation/GameMap.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
       </list>
@@ -1038,12 +1038,19 @@
       <option name="project" value="LOCAL" />
       <updated>1476208720536</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactored board and pieces into own strategy">
+      <created>1476209835782</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1476209835782</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="12" width="1584" height="880" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1051,10 +1058,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27058825" sideWeight="0.5104031" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28104576" sideWeight="0.48959687" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28104576" sideWeight="0.48959687" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16384916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16384916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12613784" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496749" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1092,7 +1099,8 @@
     <MESSAGE value="Refactored Tile to take enum as type" />
     <MESSAGE value="Added tests for battles between bombs and units, and spy and marshal" />
     <MESSAGE value="Moved interfaces/enums into framework package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved interfaces/enums into framework package" />
+    <MESSAGE value="Refactored board and pieces into own strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored board and pieces into own strategy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1108,7 +1116,7 @@
         <state relative-caret-position="2006">
           <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1136,7 +1144,7 @@
         <state relative-caret-position="1768">
           <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1164,7 +1172,7 @@
         <state relative-caret-position="799">
           <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1192,7 +1200,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,20 +1311,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="354">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="340">
+          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -1325,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+        <state relative-caret-position="340">
+          <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
           </folding>

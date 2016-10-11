@@ -46,9 +46,5 @@ class TestGameMap : GameMap {
         Pair(Position(5, 6), TileImpl(TileType.WATER)),
         Pair(Position(5, 7), TileImpl(TileType.WATER))
     )
-    fun createBoard(board: MutableMap<Position, Tile>,
-                    pieces: MutableMap<Position, Piece>): Boolean {
-        return true
-    }
 }
 

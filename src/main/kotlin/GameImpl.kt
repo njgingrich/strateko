@@ -1,6 +1,5 @@
 import framework.*
 import strategy.map.GameMap
-import kotlin.collections.MutableMap
 
 /**
  * @author nathan
@@ -8,8 +7,6 @@ import kotlin.collections.MutableMap
  */
 class GameImpl(map: GameMap) : Game {
     val map: GameMap
-    //var pieces: MutableMap<Position, Piece>
-    //var board: Map<Position, Tile>
 
     init {
         this.map = map
@@ -67,8 +64,6 @@ class GameImpl(map: GameMap) : Game {
     }
 
     private fun battle(attacker: Piece, defender: Piece): Piece {
-        System.out.println("attacker: " + attacker)
-        System.out.println("defender: " + defender)
         when (defender.type) {
             PieceType.BOMB -> {
                 if (attacker.type == PieceType.MINER) {

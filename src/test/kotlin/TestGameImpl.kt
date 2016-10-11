@@ -91,7 +91,6 @@ class TestGameImpl : StringSpec() {
                     game.movePiece(Position(9, col), Position(8, col)) shouldBe true
                     game.getPieceAt(Position(8, col))?.type shouldBe PieceType.MINER
                 } else {
-                    System.out.println(col)
                     game.movePiece(Position(9, col), Position(8, col)) shouldBe true
                     game.getPieceAt(Position(8, col))?.type shouldBe PieceType.BOMB
                 }
