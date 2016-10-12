@@ -1,3 +1,5 @@
+package game
+
 import game.framework.*
 import game.strategy.GameMap
 

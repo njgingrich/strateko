@@ -1,3 +1,5 @@
+package game
+
 import game.framework.Piece
 import game.framework.PieceType
 import game.framework.Player

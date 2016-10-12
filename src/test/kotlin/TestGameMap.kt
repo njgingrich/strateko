@@ -1,3 +1,5 @@
+import game.PieceImpl
+import game.TileImpl
 import game.framework.*
 import game.strategy.GameMap
 
