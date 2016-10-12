@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9602e5fb-a1b0-4a12-8f5e-2b1059e4710e" name="Default" comment="Reformatted packages">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/Game.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/Game.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/Piece.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/Piece.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/PieceType.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/PieceType.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/Player.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/Player.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/Position.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/Position.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/Tile.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/Tile.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/framework/TileType.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/framework/TileType.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/strategy/map/GameMap.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/game/strategy/GameMap.kt" />
+    <list default="true" id="9602e5fb-a1b0-4a12-8f5e-2b1059e4710e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/no_tornado_tornadofx_1_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/Application.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/strateko.iml" afterPath="$PROJECT_DIR$/.idea/modules/strateko.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/PieceImpl.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/PieceImpl.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/TileImpl.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/TileImpl.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="strateko.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,12 +55,12 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="GameImpl.kt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
                   <folding>
-                    <element signature="e#0#52#0" expanded="true" />
+                    <element signature="e#14#66#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -89,22 +83,47 @@
           <file leaf-file-name="TestGameImpl.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
                   <folding>
-                    <element signature="e#0#90#0" expanded="true" />
+                    <element signature="e#0#134#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TestGameMap.kt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
+          <file leaf-file-name="Application.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Application.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
                   <folding>
-                    <element signature="e#0#52#0" expanded="true" />
+                    <element signature="e#12#77#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BoardView.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BoardView.kt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#17#110#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -117,10 +136,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Enum" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -448,7 +468,6 @@
         <option value="$PROJECT_DIR$/src/main/Game.kt" />
         <option value="$PROJECT_DIR$/src/test/TestGameImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/GameImpl.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Piece.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/PieceImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Game.kt" />
@@ -464,8 +483,15 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/strategy/map/GameMap.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/framework/Game.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/Application.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/fxml/BoardView.fxml" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/BoardView.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.fxml" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt" />
       </list>
     </option>
   </component>
@@ -513,6 +539,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="strateko" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -568,6 +598,40 @@
               <option name="myItemId" value="kotlin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="strateko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="strateko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -604,26 +668,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/build.gradle" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/kotlin/game/map/strategy" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/kotlin/ui/view" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ui.view" />
+      <recent name="game" />
       <recent name="game.map.strategy" />
       <recent name="framework" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nathan.gingrich\Documents\strateko\src\main\kotlin\ui\view" />
+      <recent name="C:\Users\nathan.gingrich\Documents\strateko\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/test/kotlin" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Build">
+  <component name="RunManager" selected="Application.Run">
     <configuration default="false" name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -639,24 +710,6 @@
           </list>
         </option>
         <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="strateko [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
-          </list>
-        </option>
-        <option name="vmOptions" />
       </ExternalSystemSettings>
       <method />
     </configuration>
@@ -714,6 +767,24 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="false" name="strateko [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -750,6 +821,15 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -884,20 +964,38 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Gradle.Build" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.strateko [testClasses]" />
+    <configuration default="false" name="Run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ui.Application" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="strateko" />
+      <envs />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build" run_configuration_type="GradleRunConfiguration" />
+      </method>
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.Run" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.Build" />
       <item index="2" class="java.lang.String" itemvalue="Gradle.strateko [assemble]" />
       <item index="3" class="java.lang.String" itemvalue="Gradle.strateko [clean]" />
       <item index="4" class="java.lang.String" itemvalue="Gradle.strateko [classes]" />
+      <item index="5" class="java.lang.String" itemvalue="Gradle.strateko [dependencies]" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Gradle.Build" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.strateko [classes]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.strateko [assemble]" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.strateko [clean]" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.strateko [testClasses]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.strateko [clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.strateko [dependencies]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.strateko [assemble]" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.strateko [classes]" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -1043,12 +1141,26 @@
       <option name="project" value="LOCAL" />
       <updated>1476297330030</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Reformatted packages">
+      <created>1476298367567</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1476298367567</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Moved classes into game package">
+      <created>1476298531065</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1476298531065</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1056,13 +1168,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.51226014" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13272922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12613784" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12526652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496749" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1105,7 +1217,9 @@
     <MESSAGE value="Fixed warnings&#10;" />
     <MESSAGE value="Added tests so pieces cannot move on the water" />
     <MESSAGE value="Added test that the flag always loses a fight" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test that the flag always loses a fight" />
+    <MESSAGE value="Reformatted packages" />
+    <MESSAGE value="Moved classes into game package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved classes into game package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1116,12 +1230,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2261">
           <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1139,17 +1253,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1167,17 +1281,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
           <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1195,17 +1309,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1223,17 +1337,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1251,7 +1365,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1263,7 +1377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/PieceImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/PieceImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1298,7 +1412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/TileImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/TileImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
@@ -1309,14 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1355,32 +1461,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GameImpl.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#95#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tornadofx-1.5.6.jar!/tornadofx/UIComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#14#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Application.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#12#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="e#17#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1430,7 +1591,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
