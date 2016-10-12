@@ -8,6 +8,7 @@ import strategy.map.GameMap
 class GameImpl(map: GameMap) : Game {
     private var turn = 1
     private var currentPlayer = Player.RED
+
     private val map: GameMap
 
     init {
@@ -51,7 +52,7 @@ class GameImpl(map: GameMap) : Game {
         if (isImmobilePiece(p)) return false
 
         if (getPlayerInTurn() != p.owner) return false
-
+        if (getTileAt(to).type == TileType.WATER) return false
         if (p.type != PieceType.SCOUT) {
             if(moveLongerThanOneTile(from, to)) return false
         }

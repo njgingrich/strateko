@@ -117,10 +117,14 @@ class TestGameImpl : StringSpec() {
             game.movePiece(Position(1,1), Position(0,1))
             game.getWinner() shouldBe Player.RED
         }
-
         "Red cannot move blue's pieces and vice versa" {
             game.movePiece(Position(0,2), Position(1,2)) shouldBe false
             game.movePiece(Position(9,0), Position(8,1)) shouldBe false
+        }
+        "Pieces cannot move onto the water" {
+            game.movePiece(Position(9,8), Position(4,8))
+            game.endPlayerTurn()
+            game.movePiece(Position(4,8), Position(4,7)) shouldBe false
         }
     }
 }
