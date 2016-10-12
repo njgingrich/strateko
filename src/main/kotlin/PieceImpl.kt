@@ -1,6 +1,6 @@
-import framework.Piece
-import framework.PieceType
-import framework.Player
+import game.framework.Piece
+import game.framework.PieceType
+import game.framework.Player
 
 /**
  * @author nathan

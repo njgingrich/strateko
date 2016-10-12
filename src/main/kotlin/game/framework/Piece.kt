@@ -1,4 +1,4 @@
-package framework
+package game.framework
 
 /**
  * @author nathan

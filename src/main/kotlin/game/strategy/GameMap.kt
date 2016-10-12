@@ -1,8 +1,8 @@
-package strategy.map
+package game.strategy
 
-import framework.Piece
-import framework.Position
-import framework.Tile
+import game.framework.Piece
+import game.framework.Position
+import game.framework.Tile
 
 /**
  * @author nathan

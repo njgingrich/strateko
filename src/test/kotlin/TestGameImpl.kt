@@ -1,6 +1,6 @@
-import framework.*
+import game.framework.*
 import io.kotlintest.specs.StringSpec
-import strategy.map.GameMap
+import game.strategy.GameMap
 
 /**
  * @author nathan
@@ -47,7 +47,7 @@ class TestGameImpl : StringSpec() {
         }
         "All normal pieces can move one square at a time" {
             for(col in 0..9) {
-                game.movePiece(Position(9, col), Position(9, col-1)) shouldBe true
+                game.movePiece(Position(9, col), Position(9, col - 1)) shouldBe true
                 game.endPlayerTurn()
             }
         }
@@ -102,58 +102,58 @@ class TestGameImpl : StringSpec() {
         }
         "After blue captures red's flag, blue wins" {
             game.endPlayerTurn()
-            game.movePiece(Position(0,2), Position(0,3))
+            game.movePiece(Position(0, 2), Position(0, 3))
             game.endPlayerTurn()
-            game.movePiece(Position(0,3), Position(0,4))
+            game.movePiece(Position(0, 3), Position(0, 4))
             game.getWinner() shouldBe Player.BLUE
         }
         "After red captures blue's flag, red wins" {
-            game.movePiece(Position(9,8), Position(1,8))
+            game.movePiece(Position(9, 8), Position(1, 8))
             game.endPlayerTurn()
-            game.movePiece(Position(1,8), Position(1,1))
+            game.movePiece(Position(1, 8), Position(1, 1))
             game.endPlayerTurn()
-            game.movePiece(Position(1,1), Position(0,1))
+            game.movePiece(Position(1, 1), Position(0, 1))
             game.getWinner() shouldBe Player.RED
         }
         "Red cannot move blue's pieces and vice versa" {
-            game.movePiece(Position(0,2), Position(1,2)) shouldBe false
-            game.movePiece(Position(9,0), Position(8,1)) shouldBe false
+            game.movePiece(Position(0, 2), Position(1, 2)) shouldBe false
+            game.movePiece(Position(9, 0), Position(8, 1)) shouldBe false
         }
         "Pieces cannot move onto the water" {
-            game.movePiece(Position(9,8), Position(4,8))
+            game.movePiece(Position(9, 8), Position(4, 8))
             game.endPlayerTurn()
-            game.movePiece(Position(4,8), Position(4,7)) shouldBe false
+            game.movePiece(Position(4, 8), Position(4, 7)) shouldBe false
         }
         "The flag loses to all movable units" {
             game = GameImpl(object: GameMap {
                 override val board: MutableMap<Position, Tile> = mutableMapOf()
                 override val pieces: MutableMap<Position, Piece> = mutableMapOf(
-                    Pair(Position(0,0), PieceImpl(PieceType.MARSHAL, Player.RED)),
-                    Pair(Position(0,1), PieceImpl(PieceType.GENERAL, Player.RED)),
-                    Pair(Position(0,2), PieceImpl(PieceType.COLONEL, Player.RED)),
-                    Pair(Position(0,3), PieceImpl(PieceType.MAJOR, Player.RED)),
-                    Pair(Position(0,4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
-                    Pair(Position(0,5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
-                    Pair(Position(0,6), PieceImpl(PieceType.SERGEANT, Player.RED)),
-                    Pair(Position(0,7), PieceImpl(PieceType.MINER, Player.RED)),
-                    Pair(Position(0,8), PieceImpl(PieceType.SCOUT, Player.RED)),
-                    Pair(Position(0,9), PieceImpl(PieceType.SPY, Player.RED)),
-                    Pair(Position(1,0), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,1), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,2), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,3), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,4), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,5), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,6), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,7), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,8), PieceImpl(PieceType.FLAG, Player.BLUE)),
-                    Pair(Position(1,9), PieceImpl(PieceType.FLAG, Player.BLUE))
+                    Pair(Position(0, 0), PieceImpl(PieceType.MARSHAL, Player.RED)),
+                    Pair(Position(0, 1), PieceImpl(PieceType.GENERAL, Player.RED)),
+                    Pair(Position(0, 2), PieceImpl(PieceType.COLONEL, Player.RED)),
+                    Pair(Position(0, 3), PieceImpl(PieceType.MAJOR, Player.RED)),
+                    Pair(Position(0, 4), PieceImpl(PieceType.CAPTAIN, Player.RED)),
+                    Pair(Position(0, 5), PieceImpl(PieceType.LIEUTENANT, Player.RED)),
+                    Pair(Position(0, 6), PieceImpl(PieceType.SERGEANT, Player.RED)),
+                    Pair(Position(0, 7), PieceImpl(PieceType.MINER, Player.RED)),
+                    Pair(Position(0, 8), PieceImpl(PieceType.SCOUT, Player.RED)),
+                    Pair(Position(0, 9), PieceImpl(PieceType.SPY, Player.RED)),
+                    Pair(Position(1, 0), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 1), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 2), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 3), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 4), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 5), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 6), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 7), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 8), PieceImpl(PieceType.FLAG, Player.BLUE)),
+                    Pair(Position(1, 9), PieceImpl(PieceType.FLAG, Player.BLUE))
                 )
             })
             val pieces = PieceType.values()
             for (col in 0..9) {
-                game.movePiece(Position(0,col), Position(1,col))
-                game.getPieceAt(Position(1,col))?.type shouldBe pieces[col+1]
+                game.movePiece(Position(0, col), Position(1, col))
+                game.getPieceAt(Position(1, col))?.type shouldBe pieces[col+1]
             }
         }
     }

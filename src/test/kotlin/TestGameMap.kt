@@ -1,5 +1,5 @@
-import framework.*
-import strategy.map.GameMap
+import game.framework.*
+import game.strategy.GameMap
 
 /**
  * @author nathan

@@ -1,5 +1,5 @@
-import framework.Tile
-import framework.TileType
+import game.framework.Tile
+import game.framework.TileType
 
 /**
  * @author nathan

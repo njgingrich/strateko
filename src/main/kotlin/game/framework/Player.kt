@@ -1,4 +1,4 @@
-package framework
+package game.framework
 
 import java.security.InvalidParameterException
 
@@ -10,8 +10,8 @@ enum class Player {
     RED, BLUE;
 
     fun other(p: Player) = when (p) {
-        Player.RED -> Player.BLUE
-        Player.BLUE -> Player.RED
+        RED -> BLUE
+        BLUE -> RED
         else -> {
             throw InvalidParameterException("Impossible player")
         }
