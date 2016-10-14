@@ -11,9 +11,13 @@ import java.net.URI
  */
 class Styles : Stylesheet() {
     companion object {
-        val img by cssclass()
         val redPiece by cssclass()
         val bluePiece by cssclass()
+
+        /*val redBomb by cssclass()
+        val redMarshal by cssclass()
+        val redGeneral by cssclass()
+        val redColonel by cssclass()*/
 
         val redColor= c("#FF0000")
         val blueColor= c("#0000FF")
@@ -24,10 +28,11 @@ class Styles : Stylesheet() {
             add(redPiece) {
                 backgroundColor += redColor
                 //graphic = ("/ui/img/red/flag.png")
-                graphic = URI("/ui/img/red/flag.png")
+                graphic = URI("/ui/img/red/blank.png")
             }
             add(bluePiece) {
                 backgroundColor += blueColor
+                graphic = URI("/ui/img/blue/blank.png")
             }
         }
     }

@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9602e5fb-a1b0-4a12-8f5e-2b1059e4710e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__no_tornado_tornadofx_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_javax_json_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_reflect_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/strateko.iml" afterPath="$PROJECT_DIR$/.idea/modules/strateko.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/ui/Application.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/Application.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt" />
     </list>
     <ignored path="strateko.iws" />
@@ -61,8 +53,8 @@
           <file leaf-file-name="GameImpl.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+                <state relative-caret-position="485">
+                  <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
                   <folding>
                     <element signature="e#14#66#0" expanded="true" />
                   </folding>
@@ -73,10 +65,10 @@
           <file leaf-file-name="BoardPiece.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="40" />
+                <state relative-caret-position="467">
+                  <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
                   <folding>
-                    <element signature="e#12#94#0" expanded="true" />
+                    <element signature="e#12#197#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -85,8 +77,8 @@
           <file leaf-file-name="Styles.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+                <state relative-caret-position="484">
+                  <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="39" />
                   <folding>
                     <element signature="e#12#104#0" expanded="true" />
                   </folding>
@@ -97,7 +89,7 @@
           <file leaf-file-name="Game.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/framework/Game.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5">
+                <state relative-caret-position="442">
                   <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
                   <folding />
                 </state>
@@ -123,10 +115,10 @@
           <file leaf-file-name="BoardView.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="484">
-                  <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+                <state relative-caret-position="348">
+                  <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
                   <folding>
-                    <element signature="e#17#294#0" expanded="true" />
+                    <element signature="e#17#319#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -134,14 +126,14 @@
           </file>
           <file leaf-file-name="BoardView.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="12" selection-end-column="22" />
+                <state relative-caret-position="398">
+                  <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder">
+                <state />
               </provider>
             </entry>
           </file>
@@ -500,7 +492,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/framework/Game.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/GameImpl.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestGameMap.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/fxml/BoardView.fxml" />
@@ -510,9 +501,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/styles/BoardPieceStyle.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/styles/Styles.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/Application.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt" />
       </list>
     </option>
   </component>
@@ -554,8 +546,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -654,6 +644,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -755,6 +749,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1254,7 +1250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476302208805</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added images and started loading correct image for piece">
+      <created>1476389765480</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1476389765480</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1319,7 +1322,8 @@
     <MESSAGE value="Reformatted packages" />
     <MESSAGE value="Moved classes into game package" />
     <MESSAGE value="Beginning to add TornadoFX/JavaFX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning to add TornadoFX/JavaFX" />
+    <MESSAGE value="Added images and started loading correct image for piece" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added images and started loading correct image for piece" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1330,6 +1334,65 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#12#197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+          <folding>
+            <element signature="e#12#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/framework/Game.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Application.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#12#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1352,9 +1415,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,14 +1430,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
@@ -1384,7 +1445,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#17#294#0" expanded="true" />
+            <element signature="e#17#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1411,9 +1472,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1439,9 +1498,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1467,9 +1524,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1495,9 +1550,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,9 +1576,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1616,7 +1667,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
-            <element signature="e#0#95#0" expanded="true" />
+            <element signature="e#0#95#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1625,17 +1676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1649,50 +1689,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/framework/Game.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
+        <state relative-caret-position="442">
           <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/Board.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/Board.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        <state relative-caret-position="398">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ui/view/BoardView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestGameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="-1485">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/game/GameImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="485">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#14#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <folding>
-            <element signature="e#12#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1707,22 +1735,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="348">
+          <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
           <folding>
-            <element signature="e#12#94#0" expanded="true" />
+            <element signature="e#17#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/view/BoardView.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/Styles.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="39" />
           <folding>
-            <element signature="e#17#294#0" expanded="true" />
+            <element signature="e#12#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ui/BoardPiece.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="e#12#197#0" expanded="true" />
           </folding>
         </state>
       </provider>
