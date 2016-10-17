@@ -3,8 +3,6 @@ package ui
 import game.framework.Piece
 import game.framework.Player
 import javafx.scene.control.Button
-import javafx.scene.image.Image
-import javafx.scene.image.ImageView
 import tornadofx.addClass
 
 /**
@@ -12,9 +10,9 @@ import tornadofx.addClass
  * Created Oct 13, 2016.
  */
 class BoardPiece(p: Piece) : Button() {
-    private val baseURI = "/ui/img/"
     private val lowerOwnerName = p.owner.name.toLowerCase()
     private val lowerPieceName = p.type.name.toLowerCase()
+    private val cssName = "$lowerOwnerName-$lowerPieceName"
 
     init {
         when (p.owner) {
@@ -25,10 +23,6 @@ class BoardPiece(p: Piece) : Button() {
                 addClass(Styles.redPiece)
             }
         }
-        val imageUri = "$baseURI$lowerOwnerName/$lowerPieceName.png"
-        System.out.println("class: " + p.owner.name.toLowerCase() + "Piece")
-        val image = ImageView()
-        graphic = image
-        image.imageProperty().set(Image(imageUri))
+        addClass(cssName)
     }
 }
